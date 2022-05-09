@@ -4,67 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title>
-        <script type="javascript" src="script.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <body>
-        <script>
-            const choices = ['Rock', 'Paper', 'Scissors'];
-            let playerScore = 0;
-            let compScore = 0;
-
-            function computerPlay() {
-                return choices[Math.floor(Math.random() * choices.length)];
-            }
-
-            function playRound() {  
-                computerSelection = computerPlay(); 
-                playerSelection = prompt("Rock, Paper, or Scissors? ");
-
-                if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-                    playerScore += 1;
-                    return "You win! Rock beats Scissors!";
-                } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
-                    playerScore += 1;
-                    return "You win! Scissors beats Paper!";
-                } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-                    playerScore += 1;
-                    return "You win! Paper beats Rock!";
-                } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-                    compScore += 1;
-                    return "You lose! Rock beats Scissors!";
-                } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-                    compScore += 1;
-                    return "You lose! Scissors beats Paper!";
-                } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-                    compScore += 1;
-                    return "You lose! Paper beats Rock!";
-                } else {
-                    playerScore += 1;
-                    compScore += 1;
-                    return "Tie!"
-                }
-            }
-
-            function game() {
-                for (let i = 0; i < 5; i++) {
-                    console.log(playRound());
-                    console.log(`Your score: ${playerScore}`);
-                    console.log(`Computer score: ${compScore}`);
-                }
-                winner();
-            }
-
-            function winner() {
-                if (compScore > playerScore) {
-                    console.log("\nThe computer dominated your ass! Better luck next time!")
-                } else if (compScore < playerScore) {
-                    console.log("\nWay to crush it! You win!")
-                } else {
-                    console.log("\nHoly shizzers! It's a tie!")
-                }
-            }
-            game();
-        </script>
+       
     </body>
 </html>
